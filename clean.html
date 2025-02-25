@@ -22,21 +22,33 @@
 			font-family: Times, "Times New Roman";
 			font-size: 20px;
 		}
+		.wrapper {
+			max-width: 1000px;
+			margin: 0 auto;
+			padding: 20px;
+		}
 		.site-nav{
-			
-			color: darkred;
 			text-align: center;
 			font-family: Palatino;
 			font-size: 21px;
 			
 		}
+		.site-nav a {
+			text-align: center;
+			text-decoration: none;
+			color: darkred;
+		}
+		.site-nav a:hover {
+			color: white;
+			text-shadow: 0 0 8px turquoise;
+		}
+		
 		.page-nav{
 			background-color:paleturquoise;
 			border-radius: 5px;
 			border: solid;
 			padding: 10px;
-			margin-right:10px;
-            margin-left:10px;
+			margin 10px 12px;
 			
 			font-family: Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
 			text-align: center;
@@ -50,7 +62,7 @@
 		}
 		.page-nav a:hover{
 			color: white; 
-			text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+			text-shadow: 0 0 8px darkred;
 			cursor: pointer;
 		}
 		
@@ -133,16 +145,19 @@
 
 	
 	<header class="site-header">
+		<a href="index.html" class="site-logo"> <img class="site-logo-image" src="images/site-logo.svg" alt="Name of Website"> </a> 
+  
+		
 	<nav class="site-nav">
-		<b href="twp-home.html">Latest</b>			| <!-- this links to your main page (the one you're working at the moment) -->
-		<b href="twp-archive.html">Archive</b> 		|
-		<b href="twp-theory.html">Theory</b> 		|
-		<b href="twp-about.html">About</b> 
+		<a href="twp-home.html">Latest</a>			| <!-- this links to your main page (the one you're working at the moment) -->
+		<a href="twp-archive.html">Archive</a> 		|
+		<a href="twp-theory.html">Theory</a> 		|
+		<a href="twp-about.html">About</a> 
 	</nav>
 	</header><!-- site header ends -->
 	
 	
-	<main>
+	<main class="wrapper">
 	<header class="page-header">
 		<h1>Week 15 <br> <em>My Ephemeral</em> items 
 		</h1>
@@ -164,7 +179,7 @@
 		
 	<preface class="preface">
 	<h2 id="sec1">Preface</h2>
-	<p>Welcome, you curious mind! Wait, question, did you clean that room yet? Take out the trash? Are you even organized? Well that aside, What you'll find here are some items that I've briefly charished. I know it just looks like garbage! I know you, the reader, are wondering why these miscellaneous things are displayed here. To be honest, I wasn’t really interested in categorizing my recurring waste but see how I contribute to waste. Actually, I thought better yet, why not the unique objects? I say this in particular because of the phrase, “One can learn a lot from one’s trash,” and that got me thinking. What if the discarded, the overlooked, and seemingly useless had stories to tell? For example, a mangled concert wristband, a crumpled sticky note, or even an old worn-out car each carries a glimpse of the past often frozen in time.</p>
+	<p>Welcome, you curious mind! Wait, question, did you clean that room yet? Take out the trash? Are you even organized? Well that aside, What you'll find here are some items that I've briefly cherished. I know it just looks like garbage! I know you, the reader, are wondering why these miscellaneous things are displayed here. To be honest, I wasn’t really interested in categorizing my recurring waste but see how I contribute to waste. Actually, I thought better yet, why not the unique objects? I say this in particular because of the phrase, “One can learn a lot from one’s trash,” and that got me thinking. What if the discarded, the overlooked, and seemingly useless had stories to tell? For example, a mangled concert wristband, a crumpled sticky note, or even an old worn-out car each carries a glimpse of the past often frozen in time.</p>
 	<p>So I started collecting, not just trash but the odd, rare things that sparked a significant memory. As trivial as that may sound, I found a worn-out lighter, or as I used to call it my lucky lighter, a small toy car that belonged to a kid who loves racing and fast cars. Who is that kid in question? Is he or she still interested in that specific topic? 
 	<p>Well, all that can be confusing but undoubtedly answered. Maybe trash isn’t just trash anymore. Maybe it's a unique breadcrumb trail that leads into our forgotten lives, abandoned dreams, and secret obsessions. Who knows but it does strike a renewed sense of curiosity. . . . </p>
 	</preface>
