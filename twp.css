@@ -1,150 +1,171 @@
 @charset "UTF-8";
 /* CSS Document */
 
-		.site-header {
-			display: flex;
-    		flex-direction: row;
-    		justify-content: flex-start;
-    		align-items: center;
-			column-gap: 32px;
-		}
+		/* General Styles */
+body {
+    line-height: 1.6;
+    margin: 10px 12px;
+    padding: 10px;
+    background-color:#E4C1A0;
+    font-family: Times, "Times New Roman", serif;
+    font-size: 20px;
+}
 
-		.site-logo-image {
-			border: none;
-			max-width: 200px;
-			height: 90px; /* Matches header height */
-		}
+/* Site Header */
+.site-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 32px;
+}
 
-		h1{
-			text-align: center;
-			background: lightgrey;
-			border-radius: 15px;
-			border: solid;
-			padding: auto;
-		}
-		body{
-			line-height: 1.7;
-			margin: 10px 12px;
-			padding: 10px;
-			background-color: ivory;
-			font-family: Times, "Times New Roman";
-			font-size: 20px;
-		}
-		.wrapper {
-			max-width: 1000px;
-			margin: auto;
-			padding: 50px;
-		}
-		
-		.site-nav{
-			text-align: center;
-			font-family: Palatino;
-			font-size: 21px;
-			
-		}
-		.site-nav a {
-			text-align: center;
-			text-decoration: none;
-			color: darkred;
-		}
-		.site-nav a:hover {
-			color: white;
-			text-shadow: 0 0 8px turquoise;
-		}
-		
-		.page-nav{
-			background-color:paleturquoise;
-			border-radius: 5px;
-			border: solid;
-			padding: 10px;
-			margin: 10px 12px;
-			
-			font-family: Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
-			text-align: center;
-			letter-spacing: 2px;
-		
-		}
-		.page-nav a{
-			text-decoration: none;
-			color: black; 
-			transition: color 0.3s ease, text-shadow 0.3s ease;
-		}
-		.page-nav a:hover{
-			color: white; 
-			text-shadow: 0 0 8px darkred;
-			cursor: pointer;
-		}
-		
-		.preface{
-			text-align: left;
-			font-family: Times, "Times New Roman";
-			font-size: 22px;
-			
-			
-		}
-		.overview{
-			text-align: left;
-			font-family: Times, "Times New Roman";
-			font-size: 22px;
-		}
-		
-		h2{
-			font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif"
-			
-		}
-		h3{
-			font-family: Times;
-			font-size: 1.3em;
-			text-align: center; padding: auto;
-		}
-		.gallery{
-			display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            text-align: center;
-            max-width: 800px;
-            margin: auto;
-		}
-		.gallery img{
-			width: 100%;
-			height: auto;
-			border: 5px solid;
-			color: darkred;
-		}
-		.table{
-			width: 100%;
-			border-collapse: collapse;
-			margin-top: 20px;
-		}
-		th, td {
-			border: 2px solid;
-			padding: 10px;
-			text-align: left;
-		}
-		tr {
-			background-color: white;
-			font-weight: bold;
-		}
-		tr:nth-child(even) {
-			background-color: paleturquoise;
-		}
-		tr:hover {
-			background-color: grey;
-		}
-		td:first-child {
-			text-align: center;
-			font-weight: bold;
-		}
-		.list {
-			padding-left: 20px;
-			font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
-			background-color: #e9ecef;
-			border-radius: 15px;
-			margin: 20px;
-		}
-		img {
-			border: 5px solid;
-			border-radius: 153px;
-			margin-top: 20px;
-		}
+/* Logo */
+.site-logo-image {
+    border: none;
+    max-width: 200px;
+    height: 90px; 
+}
 
+/* Headings */
+h1 {
+    text-align: center;
+    background: lightgrey;
+    border-radius: 15px;
+    border: solid;
+    padding: auto;
+}
+
+h2 {
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+    
+}
+
+h3 {
+    font-family: Times;
+    font-size: 1.3em;
+    text-align: center;
+    padding: auto;
+}
+
+/* Wrapper */
+.wrapper {
+	background: ivory;
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px;
+}
+
+/* Navigation */
+.site-nav {
+    text-align: center;
+    font-family: Palatino, serif;
+    font-size: 21px;
+}
+
+.site-nav a {
+    text-align: center;
+    text-decoration: none;
+    color: #800020; 
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.site-nav a:hover {
+    color: ivory;
+    text-shadow: 0 0 8px turquoise;
+}
+
+/* Page Navigation */
+.page-nav {
+    background-color: paleturquoise;
+    border-radius: 5px;
+    border: dashed;
+    padding: 10px;
+    margin: 10px 12px;
+    font-family: Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.page-nav a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.page-nav a:hover {
+    color: ivory;
+    text-shadow: 0 0 8px #800020; 
+    cursor: pointer;
+}
+
+/* Content Sections */
+.preface, .overview {
+    text-align: left;
+    font-family: Times, "Times New Roman", serif;
+    font-size: 22px;
+}
+
+/* Image Gallery */
+.gallery {
+    display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border: 5px solid #800020; /* Burgundy border */
+    border-radius: 10px;
+}
+
+/* Table Styles */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 2px solid; /* Burgundy border */
+    padding: 10px;
+    text-align: left;
+}
+
+tr {
+    background-color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: paleturquoise; /* Turquoise row alternation */
+}
+
+tr:hover {
+    background-color: grey;
+}
+
+td:first-child {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* List Styles */
+.list {
+    padding-left: 20px;
+    font-family: Baskerville, "Palatino Linotype", Palatino, "Times New Roman", serif;
+    background-color: lightgrey;
+    border-radius: 15px;
+    margin: 20px;
+}
+
+/* Author Image */
+img {
+    border: 5px solid #800020;
+    border-radius: 100px;
+    margin-top: 20px;
+}
