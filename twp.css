@@ -1,30 +1,80 @@
 @charset "UTF-8";
 /* CSS Document */
 
-		/* General Styles */
+/* General Styles */
 body {
     line-height: 1.6;
     margin: 10px 12px;
     padding: 10px;
-    background-color:#E4C1A0;
+    background-color: #E4C1A0;
     font-family: Times, "Times New Roman", serif;
     font-size: 20px;
 }
 
 /* Site Header */
 .site-header {
+    background: #B87D50;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    column-gap: 32px;
+    padding: 10px 20px;
+    width: auto;
+    max-width: 1110px;
+    margin: 0 auto;
+    border: 4px dashed #D4A276;
+    border-radius: 10px;
 }
 
 /* Logo */
 .site-logo-image {
-    border: none;
-    max-width: 200px;
-    height: 90px; 
+    height: 50px;
+}
+
+/* Navigation */
+.site-nav {
+    display: flex;
+    gap: 20px; 
+    font-family: Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+    font-size: 22px;
+    background: #D4A276;
+    padding: 10px 20px;
+    border-radius: 8px;
+	margin: 0 auto;
+}
+
+.site-nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 12px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.site-nav a:hover {
+    background: white;
+    color: #800020;
+    border-radius: 5px;
+}
+
+.sitenav-grid {
+    display: grid;
+    grid-template-columns: auto repeat(5, 1fr); /* First column for logo */
+    align-items: center;
+    background: #E4C1A0;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #D4A276;
+}
+
+.sitenav-grid a {
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-right: solid white 2px;
+}
+
+.sitenav-grid a:hover {
+    background: white;
 }
 
 /* Headings */
@@ -32,59 +82,45 @@ h1 {
     text-align: center;
     background: lightgrey;
     border-radius: 15px;
-    border: solid;
-    padding: auto;
+    border: groove 20px;
 }
-
 h2 {
-    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
-    
+  font-family: "Sigmar", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 32px;
+  color: #800020; 
+  text-transform: uppercase;
+  letter-spacing: 2px;
+	
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 5px grey;
+  border-bottom: 3px solid #E4C1A0;
+  padding: 20px;
 }
 
 h3 {
     font-family: Times;
     font-size: 1.3em;
     text-align: center;
-    padding: auto;
 }
 
 /* Wrapper */
 .wrapper {
-	background: ivory;
-	max-width: 1000px;
-	margin: auto;
-	padding: 50px;
+    background: ivory;
+    max-width: 1000px;
+    margin: auto;
+    padding: 80px;
 }
-
-/* Navigation */
-.site-nav {
-    text-align: center;
-    font-family: Palatino, serif;
-    font-size: 21px;
-}
-
-.site-nav a {
-    text-align: center;
-    text-decoration: none;
-    color: #800020; 
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-.site-nav a:hover {
-    color: ivory;
-    text-shadow: 0 0 8px turquoise;
-}
-
 /* Page Navigation */
 .page-nav {
     background-color: paleturquoise;
     border-radius: 5px;
-    border: dashed;
-    padding: 10px;
-    margin: 10px 12px;
+    border: double thick #08CDF9;
+    padding: 5px;
+    margin: auto;
     font-family: Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
     text-align: center;
-    letter-spacing: 2px;
 }
 
 .page-nav a {
@@ -95,7 +131,7 @@ h3 {
 
 .page-nav a:hover {
     color: ivory;
-    text-shadow: 0 0 8px #800020; 
+    text-shadow: 0 0 8px #800020;
     cursor: pointer;
 }
 
@@ -109,7 +145,7 @@ h3 {
 /* Image Gallery */
 .gallery {
     display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     text-align: center;
     max-width: 800px;
@@ -119,8 +155,14 @@ h3 {
 .gallery img {
     width: 100%;
     height: auto;
-    border: 5px solid #800020; /* Burgundy border */
+    border: 5px solid #800020;
     border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    transform: scale(1.5);
 }
 
 /* Table Styles */
@@ -131,9 +173,9 @@ h3 {
 }
 
 th, td {
-    border: 2px solid; /* Burgundy border */
+    border: 2px solid;
     padding: 10px;
-    text-align: left;
+    text-align: center;
 }
 
 tr {
@@ -142,7 +184,7 @@ tr {
 }
 
 tr:nth-child(even) {
-    background-color: paleturquoise; /* Turquoise row alternation */
+    background-color: paleturquoise;
 }
 
 tr:hover {
@@ -164,8 +206,16 @@ td:first-child {
 }
 
 /* Author Image */
-img {
-    border: 5px solid #800020;
-    border-radius: 100px;
-    margin-top: 20px;
+.auth-img {
+    float: right; 
+    margin: 10px 15px; /* Adds spacing around the image */
+    border-radius: 100px; /* Keeps your rounded border */
+    width: 250px; 
+    height: auto;
+	border: groove #D4A276 15px;
 }
+.return a{
+	color: blue;
+	padding: 4px;
+}
+
