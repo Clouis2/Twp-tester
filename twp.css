@@ -80,9 +80,9 @@ body {
 /* Headings */
 h1 {
     text-align: center;
-    background: lightgrey;
+    background: #D4A276;
     border-radius: 15px;
-    border: groove 20px;
+    border: groove #B87D50 20px;
 }
 h2 {
   font-family: "Sigmar", sans-serif;
@@ -116,9 +116,7 @@ h3 {
 .page-nav {
     background-color: paleturquoise;
     border-radius: 5px;
-    border: double thick #08CDF9;
     padding: 5px;
-    margin: auto;
     font-family: Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
     text-align: center;
 }
@@ -162,7 +160,7 @@ h3 {
 }
 
 .gallery img:hover {
-    transform: scale(1.5);
+    transform: scale(1.2);
 }
 
 /* Table Styles */
@@ -198,24 +196,81 @@ td:first-child {
 
 /* List Styles */
 .list {
-    padding-left: 20px;
+    padding: 20px;
     font-family: Baskerville, "Palatino Linotype", Palatino, "Times New Roman", serif;
-    background-color: lightgrey;
-    border-radius: 15px;
     margin: 20px;
+    max-width: 200px;
+    line-height: 1.6;
+}
+
+.list li {
+    list-style: none; 
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.list a {
+    text-decoration: none; 
+    color: #333;
+    display: block;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Custom bullet using a pseudo-element */
+.list li::before {
+    content: "➤";
+    position: absolute;
+    left: -35px;
+    transition: left 0.3s ease;
+    color: darkred;
+}
+
+.list li:hover {
+    background-color: #E4C1A0;
+}
+
+.list li:hover::before {
+    left: 5px; 
+}
+
+.list a:hover {
+    color: darkturquoise;
+	font-weight: bold;
 }
 
 /* Author Image */
 .auth-img {
     float: right; 
-    margin: 10px 15px; /* Adds spacing around the image */
-    border-radius: 100px; /* Keeps your rounded border */
+    margin: 10px 15px; 
+    border-radius: 100px; 
     width: 250px; 
     height: auto;
 	border: groove #D4A276 15px;
 }
 .return a{
+	display: inline-block;
 	color: blue;
 	padding: 4px;
+	font-size: 18px;
+	font-weight: bold;
+    color: white;
+    background-color: #800020; /* Dark red */
+    text-decoration: none;
+    border-radius: 8px;
+    border: 2px solid white;
+    transition: all 0.3s ease-in-out;
+}
+.return:hover a{
+    background-color: paleturquoise;
+    color: #800020;
+    border-color: #800020;
+}
+a{
+	text-decoration: none;
+	color: blue;
+	padding-left: 5px;
 }
 
